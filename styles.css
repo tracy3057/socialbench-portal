@@ -1,0 +1,413 @@
+/* SocialBench human-evaluation portal — shared styles
+   Palette mirrors framework_overview (Okabe-Ito-aligned, paper-friendly).
+   No build system; vanilla CSS only. */
+
+:root {
+  --sidebar-bg:   #F2F4F7;
+  --sidebar-hi:   #E0EAFE;
+  --sidebar-blue: #3B82F6;
+  --card-bg:      #FFFFFF;
+  --page-bg:      #F9FAFB;
+  --text:         #1F2937;
+  --subtext:      #6B7280;
+  --rule:         #E5E7EB;
+  --accent:       #3B82F6;
+  --accent-hover: #2563EB;
+  --good:         #10B981;
+  --warn:         #EF4444;
+  --warn-bg:      #FEE2E2;
+  --warn-text:    #B91C1C;
+  --info-bg:      #EEF2FF;
+  --chip-blue:    #DBEAFE;
+  --chip-blue-tx: #1E40AF;
+  --chip-green:   #D1FAE5;
+  --chip-green-tx:#065F46;
+  --chip-amber:   #FEF3C7;
+  --chip-amber-tx:#92400E;
+  --chip-red:     #FEE2E2;
+  --chip-red-tx:  #B91C1C;
+  --chip-grey:    #F3F4F6;
+  --chip-grey-tx: #374151;
+  --joint-warn:   #FEF3C7;
+  --joint-border: #FCD34D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue",
+               Helvetica, Arial, "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--page-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+.app {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+/* ---------------- Sidebar ---------------- */
+
+.sidebar {
+  background: var(--sidebar-bg);
+  padding: 18px 14px;
+  border-right: 1px solid var(--rule);
+}
+
+.sidebar .welcome {
+  font-size: 11px;
+  color: var(--subtext);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 14px;
+}
+
+.sidebar .welcome .logout {
+  background: #E5E7EB;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 10px;
+  color: var(--text);
+  cursor: pointer;
+}
+.sidebar .welcome .logout:hover { background: #D1D5DB; }
+
+.sidebar nav a {
+  display: block;
+  padding: 8px 10px;
+  margin-bottom: 2px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text);
+}
+.sidebar nav a:hover {
+  background: #E9EDF3;
+  text-decoration: none;
+}
+.sidebar nav a.active {
+  background: var(--sidebar-hi);
+  color: var(--sidebar-blue);
+  font-weight: 600;
+}
+
+/* ---------------- Main panel ---------------- */
+
+.main {
+  padding: 28px 36px;
+  background: var(--card-bg);
+  min-width: 0;
+}
+
+.crumb {
+  font-size: 12px;
+  color: var(--subtext);
+  margin-bottom: 8px;
+}
+
+h1.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: var(--text);
+}
+h2.page-section {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 24px 0 10px 0;
+  color: var(--text);
+}
+
+p, li { line-height: 1.55; }
+ol, ul { padding-left: 22px; }
+ol li, ul li { margin: 4px 0; }
+
+.subtle { color: var(--subtext); font-size: 13px; }
+.italic { font-style: italic; }
+.mono { font-family: SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12.5px; }
+
+/* ---------------- Buttons ---------------- */
+
+.btn {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 120ms ease;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--accent); color: white;
+}
+.btn-primary:hover { background: var(--accent-hover); color: white; }
+.btn-warn {
+  background: var(--warn-bg); color: var(--warn-text);
+}
+.btn-warn:hover { background: #FCA5A5; color: white; }
+.btn-grey {
+  background: #F3F4F6; color: var(--text); border: 1px solid var(--rule);
+}
+.btn-grey:hover { background: #E5E7EB; }
+.btn-block { display: block; width: 100%; text-align: center; margin-bottom: 10px; }
+
+/* ---------------- Form controls ---------------- */
+
+select, input[type="text"], textarea {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  background: white;
+  color: var(--text);
+  outline: none;
+}
+select:focus, input:focus, textarea:focus { border-color: var(--accent); }
+
+.field-label {
+  font-size: 12px;
+  color: var(--subtext);
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.dropdown { width: 56%; max-width: 420px; }
+
+/* ---------------- Chips ---------------- */
+
+.chip {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.chip-blue   { background: var(--chip-blue);  color: var(--chip-blue-tx); }
+.chip-green  { background: var(--chip-green); color: var(--chip-green-tx); }
+.chip-amber  { background: var(--chip-amber); color: var(--chip-amber-tx); }
+.chip-red    { background: var(--chip-red);   color: var(--chip-red-tx); }
+.chip-grey   { background: var(--chip-grey);  color: var(--chip-grey-tx); }
+
+/* ---------------- Cards / panels ---------------- */
+
+.card {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.card-info {
+  background: var(--info-bg);
+  border-color: #C7D2FE;
+}
+.card-amber {
+  background: var(--joint-warn);
+  border: 1px solid var(--joint-border);
+}
+
+.callout-warn {
+  background: var(--warn-bg);
+  border-left: 4px solid var(--warn);
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--warn-text);
+}
+
+/* ---------------- Layout helpers ---------------- */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.grid-side {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 18px 0;
+}
+
+/* ---------------- Tables ---------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+table th {
+  background: #E5E7EB;
+  text-align: left;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text);
+  padding: 8px 10px;
+  font-weight: 700;
+}
+table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  color: var(--text);
+}
+table tr:nth-child(2n) td { background: #FAFAFA; }
+table tr:hover td { background: #F3F4F6; }
+.col-mono { font-family: SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 11.5px; color: var(--accent); }
+
+/* ---------------- Radio (Phase-7 (a)/(b)/(c)) ---------------- */
+
+.radio-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background: white;
+}
+.radio-row:hover { background: #F9FAFB; }
+.radio-row input[type="radio"] {
+  margin-top: 3px;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+.radio-row.selected {
+  background: #EFF6FF;
+  border-color: var(--accent);
+}
+.radio-row .head {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text);
+}
+.radio-row .body {
+  color: var(--subtext);
+  font-size: 12px;
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+/* ---------------- Stat / verdict banner ---------------- */
+
+.banner-warn {
+  background: var(--joint-warn);
+  border: 1px solid var(--joint-border);
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #92400E;
+  margin: 14px 0;
+}
+
+/* ---------------- Demographics (inline SVG pies) ---------------- */
+
+.pies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+.pies .pie-card {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+.pies .pie-card svg { width: 100%; height: auto; max-height: 200px; }
+.pies .pie-card h3 {
+  font-size: 13px;
+  margin: 8px 0 4px 0;
+  color: var(--text);
+  font-weight: 700;
+}
+.pies .pie-card .legend {
+  font-size: 11px;
+  color: var(--subtext);
+  text-align: left;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+.pies .pie-card .legend .swatch {
+  display: inline-block;
+  width: 9px; height: 9px;
+  border-radius: 2px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* ---------------- Tally bar (annotate page) ---------------- */
+
+.tally {
+  display: flex;
+  gap: 22px;
+  padding: 12px 14px;
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  border-radius: 6px;
+  margin-top: 14px;
+  font-size: 13px;
+  align-items: center;
+}
+.tally .item .num {
+  font-weight: 700;
+  color: var(--text);
+  margin-right: 6px;
+}
+.tally .item .lbl {
+  color: var(--subtext);
+}
+.tally .agg {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+/* ---------------- Footer / hint ---------------- */
+
+.hint {
+  font-size: 11.5px;
+  color: var(--subtext);
+  margin-top: 8px;
+  font-style: italic;
+}

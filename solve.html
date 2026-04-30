@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280">
+  <title>SocialBench — Question Verification (Solve)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="welcome">
+        <span>Welcome:&nbsp; reviewer-A</span>
+        <span class="logout">Logout</span>
+      </div>
+      <nav>
+        <a href="index.html">main</a>
+        <a href="index.html">Episode Verification</a>
+        <a href="solve.html">Question Verification</a>
+        <a href="annotate.html">Per-comment Annotation</a>
+        <a href="reveal.html">Reveal &amp; Resolve</a>
+        <a href="demographics.html">Sign Up</a>
+        <a href="demographics.html">Task Release</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+
+      <div class="crumb">
+        Episode <strong>HN-46425198</strong> &nbsp;·&nbsp; Question 11 (capability C3, pattern G)
+        &nbsp;·&nbsp; Step <strong>1 of 4</strong> &nbsp;·&nbsp; Timer&nbsp;
+        <span class="mono">04 m 18 s</span>
+      </div>
+
+      <h1 class="page-title">Please read the thread DAG and answer the question</h1>
+
+      <p class="subtle italic">
+        Episode HN-46425198 &nbsp;·&nbsp; 74 comments &nbsp;·&nbsp; max-depth 9
+        &nbsp;·&nbsp; thread DAG downloaded
+        (<a href="data/episode_hn_46425198.json">view JSON</a>).
+      </p>
+
+      <div class="grid-side" style="margin-top: 18px;">
+
+        <!-- ----- left column: question + options + buttons ----- -->
+        <div>
+          <div class="card">
+            <div style="font-size: 14.5px; line-height: 1.6; color: var(--text);">
+              Within the largest top-level sub-discussion of this episode, how many
+              direct replies express <strong>explicit skepticism</strong> that the
+              term <code>folx</code> is actually used in practice?
+              <span class="subtle">(Substantive endorsement of skepticism required;
+              one-word reactions excluded.)</span>
+            </div>
+
+            <div style="margin-top: 18px;">
+              <div style="margin: 6px 0;"><strong>(A)</strong>&nbsp;&nbsp; 3</div>
+              <div style="margin: 6px 0;"><strong>(B)</strong>&nbsp;&nbsp; 5</div>
+              <div style="margin: 6px 0;"><strong>(C)</strong>&nbsp;&nbsp; 7</div>
+              <div style="margin: 6px 0;"><strong>(D)</strong>&nbsp;&nbsp; 9</div>
+            </div>
+
+            <div class="field-label">Please choose answer</div>
+            <select class="dropdown">
+              <option value="A" selected>A &nbsp;— &nbsp;3</option>
+              <option value="B">B &nbsp;— &nbsp;5</option>
+              <option value="C">C &nbsp;— &nbsp;7</option>
+              <option value="D">D &nbsp;— &nbsp;9</option>
+            </select>
+          </div>
+
+          <div style="margin-top: 16px; max-width: 360px;">
+            <a href="annotate.html" class="btn btn-primary btn-block">Submit Answer</a>
+            <button class="btn btn-warn btn-block"
+                    data-demo-confirm="Marked: question does not meet requirements.">
+              Question does not meet requirements
+            </button>
+            <button class="btn btn-grey btn-block"
+                    data-demo-confirm="Marked: I don't know this question.">
+              I don't know this question
+            </button>
+          </div>
+        </div>
+
+        <!-- ----- right column: reviewer state ----- -->
+        <div>
+          <div class="card card-info">
+            <h2 style="margin: 0 0 10px 0; font-size: 14px;">Your verification state</h2>
+            <table style="font-size: 12.5px;">
+              <tr><td class="subtle" style="width: 130px; border: none;">Time elapsed</td>
+                  <td class="mono" style="border: none;">4 m 18 s</td></tr>
+              <tr><td class="subtle" style="border: none;">Comments read</td>
+                  <td class="mono" style="border: none;">74 / 74</td></tr>
+              <tr><td class="subtle" style="border: none;">Largest subtree</td>
+                  <td class="mono" style="border: none;">root = hn_c_42c8a</td></tr>
+              <tr><td class="subtle" style="border: none;">Direct replies</td>
+                  <td class="mono" style="border: none;">11 nodes</td></tr>
+              <tr><td class="subtle" style="border: none;">Tentative answer</td>
+                  <td class="mono" style="border: none; color: var(--accent);">
+                  A&nbsp;=&nbsp;4</td></tr>
+              <tr><td class="subtle" style="border: none;">Confidence</td>
+                  <td class="mono" style="border: none;">HIGH</td></tr>
+            </table>
+            <hr>
+            <div style="font-size: 12.5px; color: var(--text); line-height: 1.6;">
+              <strong>Reviewer reasoning so far:</strong>
+              <em>“4 of the 11 direct replies use explicit-skepticism markers
+              (<span class="mono">‘never seen anyone use it’</span>,
+              <span class="mono">‘just Twitter folx-talk’</span>, etc.). 3 endorse
+              the term, 3 are off-topic / stylistic, 1 is a one-liner. The 5th
+              candidate (<span class="mono">hn_c_42c8a01</span>) is a personal-experience
+              report — I read this as describing exposure rather than direct
+              skepticism, so I excluded it. Tentative answer: A = 4. Will enumerate
+              the in-scope <span class="mono">node_ids</span> next.”</em>
+            </div>
+          </div>
+
+          <div class="hint" style="margin-top: 12px;">
+            Next step: enumerate the 11 in-scope <span class="mono">node_ids</span>
+            and assign per-comment include / exclude labels. The
+            <strong>Submit Answer</strong> button takes you there.
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

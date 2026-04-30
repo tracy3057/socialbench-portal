@@ -1,0 +1,104 @@
+{
+  "episode_id": "HN-46425198",
+  "platform": "hackernews",
+  "title": "[redacted for blind review]",
+  "n_comments": 74,
+  "max_depth": 9,
+  "median_thread_token_count": 92140,
+  "largest_top_level_subdiscussion": {
+    "root_node": "hn_c_42c8a",
+    "root_excerpt": "I notice the term `folx' showing up everywhere recently. Anyone actually use it in real life or is this just an online thing?",
+    "n_direct_replies": 11
+  },
+  "in_scope_nodes": [
+    {
+      "node_id": "hn_c_42c8a01",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_3f4a",
+      "excerpt": "I have never seen anyone use folx outside of online forums.",
+      "metadata": {"points": 47, "time_relative": "+1h12m"}
+    },
+    {
+      "node_id": "hn_c_42c8a02",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_b7e2",
+      "excerpt": "This is just Twitter folx-talk, nobody says it irl.",
+      "metadata": {"points": 31, "time_relative": "+1h28m"}
+    },
+    {
+      "node_id": "hn_c_42c8a03",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_9c14",
+      "excerpt": "It's a corporate-DEI thing — I don't think anyone outside HR communications actually uses it.",
+      "metadata": {"points": 18, "time_relative": "+1h47m"}
+    },
+    {
+      "node_id": "hn_c_42c8a04",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_2d6f",
+      "excerpt": "In my whole career I've heard `folx' spoken once.",
+      "metadata": {"points": 22, "time_relative": "+2h05m"}
+    },
+    {
+      "node_id": "hn_c_42c8a05",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_e8a9",
+      "excerpt": "10 years in tech and I've literally never heard a coworker say it out loud.",
+      "metadata": {"points": 14, "time_relative": "+2h22m"}
+    },
+    {
+      "node_id": "hn_c_42c8a06",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_45c1",
+      "excerpt": "I use it constantly — most of my Slack does too.",
+      "metadata": {"points": 9, "time_relative": "+2h41m"}
+    },
+    {
+      "node_id": "hn_c_42c8a07",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_6b30",
+      "excerpt": "It's used widely in the queer-friendly spaces I'm in.",
+      "metadata": {"points": 11, "time_relative": "+3h05m"}
+    },
+    {
+      "node_id": "hn_c_42c8a08",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_a712",
+      "excerpt": "Heard it from co-workers all the time — depends what your team is like.",
+      "metadata": {"points": 7, "time_relative": "+3h32m"}
+    },
+    {
+      "node_id": "hn_c_42c8a09",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_d0a4",
+      "excerpt": "Folx > folks visually anyway, the x just looks better.",
+      "metadata": {"points": 5, "time_relative": "+4h11m"}
+    },
+    {
+      "node_id": "hn_c_42c8a10",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_72b8",
+      "excerpt": "+1",
+      "metadata": {"points": 1, "time_relative": "+4h44m"}
+    },
+    {
+      "node_id": "hn_c_42c8a11",
+      "depth": 1,
+      "parent": "hn_c_42c8a",
+      "user_pseudo": "user_91e6",
+      "excerpt": "Reminds me of the `latinx' debate from 2018.",
+      "metadata": {"points": 3, "time_relative": "+5h22m"}
+    }
+  ],
+  "note": "Excerpts and pseudonymous IDs are reconstructions for the demo. Real episode content is in the released benchmark; this demo uses paraphrased equivalents to illustrate the verification protocol without surfacing original user content."
+}

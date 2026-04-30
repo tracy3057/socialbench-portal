@@ -1,0 +1,95 @@
+{
+  "episode_id": "HN-46425198",
+  "platform": "hackernews",
+  "question_id": "q11",
+  "capability": "C3",
+  "pattern": "G",
+  "question": "Within the largest top-level sub-discussion of this episode, how many direct replies express explicit skepticism that `folx' is actually used in practice? (Substantive endorsement of skepticism required; one-word reactions excluded.)",
+  "options": {
+    "A": "3",
+    "B": "5",
+    "C": "7",
+    "D": "9"
+  },
+  "criterion_definition": "Count direct replies (depth-1 children) under the largest top-level sub-discussion's root that contain a substantive claim challenging actual usage of the term `folx' in practice. Personal-experience reports of non-encounter (e.g. `I have never seen X used') count as explicit skepticism. Bare agreements (`+1', `agreed') and one-word reactions are excluded. Off-topic / stylistic / meta comments are excluded.",
+  "gold": {
+    "chosen_idx": 1,
+    "chosen_letter": "B",
+    "value": 5,
+    "enumerated_node_ids": [
+      "hn_c_42c8a01", "hn_c_42c8a02", "hn_c_42c8a03",
+      "hn_c_42c8a04", "hn_c_42c8a05", "hn_c_42c8a06",
+      "hn_c_42c8a07", "hn_c_42c8a08", "hn_c_42c8a09",
+      "hn_c_42c8a10", "hn_c_42c8a11"
+    ],
+    "per_comment_annotations": {
+      "hn_c_42c8a01": "include  · personal-experience non-encounter (library: `personal-experience reports of non-encounter count as explicit skepticism')",
+      "hn_c_42c8a02": "include  · explicit non-use claim",
+      "hn_c_42c8a03": "include  · explicit skepticism with scope qualifier",
+      "hn_c_42c8a04": "include  · explicit non-use claim",
+      "hn_c_42c8a05": "include  · explicit non-use, framed as career observation",
+      "hn_c_42c8a06": "exclude · endorsement (constant use)",
+      "hn_c_42c8a07": "exclude · endorsement (queer-friendly spaces)",
+      "hn_c_42c8a08": "exclude · endorsement (co-worker frequency)",
+      "hn_c_42c8a09": "exclude · stylistic, not about usage",
+      "hn_c_42c8a10": "exclude · one-word reaction (`+1')",
+      "hn_c_42c8a11": "exclude · off-topic / tangent"
+    }
+  },
+  "reviewer_session": {
+    "reviewer_id": "reviewer-A",
+    "tier": "C",
+    "chosen_idx": 0,
+    "chosen_letter": "A",
+    "value": 4,
+    "confidence": "HIGH",
+    "enumerated_node_ids": [
+      "hn_c_42c8a01", "hn_c_42c8a02", "hn_c_42c8a03",
+      "hn_c_42c8a04", "hn_c_42c8a05", "hn_c_42c8a06",
+      "hn_c_42c8a07", "hn_c_42c8a08", "hn_c_42c8a09",
+      "hn_c_42c8a10", "hn_c_42c8a11"
+    ],
+    "per_comment_annotations": {
+      "hn_c_42c8a01": "exclude · personal-experience report; not direct skepticism (boundary case, not sure)",
+      "hn_c_42c8a02": "include · explicit non-use claim",
+      "hn_c_42c8a03": "include · explicit skepticism w/ scope qualifier",
+      "hn_c_42c8a04": "include · explicit non-use claim",
+      "hn_c_42c8a05": "include · explicit non-use, framed as career observation",
+      "hn_c_42c8a06": "exclude · endorsement of use",
+      "hn_c_42c8a07": "exclude · endorsement of use",
+      "hn_c_42c8a08": "exclude · endorsement of use",
+      "hn_c_42c8a09": "exclude · stylistic reaction; not about usage",
+      "hn_c_42c8a10": "exclude · one-word reaction; library exclusion",
+      "hn_c_42c8a11": "exclude · off-topic / tangent"
+    },
+    "reasoning": "11 direct replies under the largest top-level subtree. 4 substantively claim non-use; 3 endorse use; 3 off-topic / stylistic; 1 one-liner. The 5th potential include (hn_c_42c8a01) is a personal-experience report ('I have never seen anyone use folx outside of online forums') — I read this as describing the speaker's exposure rather than direct skepticism, so excluded it. Tentative answer: A = 4.",
+    "time_solve_seconds": 258,
+    "time_annotate_seconds": 314,
+    "time_total_seconds": 692
+  },
+  "joint_agreement": {
+    "answer_match": false,
+    "scope_jaccard": 1.0,
+    "per_comment_macro_f1": 0.91,
+    "per_comment_disagreements": ["hn_c_42c8a01"],
+    "verdict": "NO  ·  scope match (✓), per-comment-label mismatch on 1 node, answer mismatch (4 vs 5)"
+  },
+  "phase7_resolution": {
+    "decision": "b",
+    "decision_label": "library clause attaches",
+    "library_clause_id": "personal-experience-non-encounter-as-skepticism",
+    "library_clause_text": "Personal-experience reports of non-encounter (e.g., `I have never seen X used' or `In my whole career I've heard X once') count as explicit skepticism, because they constitute a substantive claim about actual usage rather than a bare reaction.",
+    "library_clause_origin": "pilot-derived; entered into criterion library before bulk verification began",
+    "after_resolve_reviewer_count": 5,
+    "after_resolve_gold": 5,
+    "gold_changed": false
+  },
+  "audit_trail": {
+    "phases": [
+      {"phase": 5, "name": "Shuffle", "timestamp": "2026-04-02T14:18:03Z", "by": "system", "note": "answer_index randomized to position 1 (B)"},
+      {"phase": 6, "name": "Independent Blind-Verify", "timestamp": "2026-04-02T14:24:32Z", "by": "reviewer-A", "note": "answers A=4; HIGH confidence"},
+      {"phase": 7, "name": "Compare and Resolve", "timestamp": "2026-04-02T14:31:11Z", "by": "gold-author + senior-reviewer", "note": "decision (b); attached library clause `personal-experience-non-encounter-as-skepticism`"},
+      {"phase": 8, "name": "Distractor Audit", "timestamp": "2026-04-02T14:34:50Z", "by": "system", "note": "no fabricated distractors; all four options derived from real error_type categories"}
+    ]
+  }
+}

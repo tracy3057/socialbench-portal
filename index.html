@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280">
+  <title>SocialBench Verification Portal — Guidelines</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ------------------ Sidebar ------------------ -->
+    <aside class="sidebar">
+      <div class="welcome">
+        <span>Welcome:&nbsp; reviewer-A</span>
+        <span class="logout">Logout</span>
+      </div>
+      <nav>
+        <a href="index.html">main</a>
+        <a href="index.html">Episode Verification</a>
+        <a href="solve.html">Question Verification</a>
+        <a href="annotate.html">Per-comment Annotation</a>
+        <a href="reveal.html">Reveal &amp; Resolve</a>
+        <a href="demographics.html">Sign Up</a>
+        <a href="demographics.html">Task Release</a>
+      </nav>
+    </aside>
+
+    <!-- ------------------ Main panel ------------------ -->
+    <main class="main">
+
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+          <h1 class="page-title">I.&nbsp; Specific Process of Question Verification</h1>
+          <div class="subtle">
+            SocialBench evaluates <em>thread-scoped social-predicate aggregation</em>.
+            Each question requires you to (1) resolve a thread-defined scope, (2) apply
+            a stated social predicate to every in-scope comment, and (3) aggregate the
+            labels into a numeric answer.
+            Verification at this portal is therefore <strong>three-axis joint
+            agreement</strong>: chosen answer, enumerated in-scope <code>node_ids</code>,
+            and per-comment include / exclude labels must all match the author.
+          </div>
+        </div>
+        <a href="solve.html" class="btn btn-primary" style="white-space: nowrap;">
+          Start Verification
+        </a>
+      </div>
+
+      <ol style="margin-top: 18px;">
+        <li>
+          Click <strong>“Question Verification”</strong> in the sidebar to select an
+          episode and question. The episode table at the top shows
+          <span class="mono">total_demand</span>,
+          <span class="mono">#verified</span>, and
+          <span class="mono">#pending_verification</span> per episode. You can only pick
+          tasks where <span class="mono">#pending &gt; 0</span>; you cannot verify
+          questions you authored yourself.
+        </li>
+        <li>
+          Click <strong>Start Answering</strong> to download the episode JSON
+          (thread DAG + per-node metadata: <span class="mono">user · parent ·
+          content · domain-specific metadata</span>) and load the question.
+          The timer starts on click. Run through the
+          <strong>seven question-quality checks</strong> below; if any fails, click
+          <span class="chip chip-red">Question does not meet requirements</span>
+          and write the rejection reason.
+          <ol style="margin-top: 8px;">
+            <li><strong>Locator check.</strong> The stem points to a uniquely
+                identifiable scope (<em>largest sub-discussion</em>,
+                <em>longest chain</em>, etc.); no rank qualifiers
+                (“2nd / 3rd”), no size hints (“the 27 replies”), no content
+                glosses.</li>
+            <li><strong>Multi-comment aggregation.</strong> &ge;&nbsp;15 comments in
+                scope for count / ratio questions; 8–12 for ranking / odd-one-out.
+                Single-comment retrieval is forbidden.</li>
+            <li><strong>Quantitative-relational answer.</strong> Options are
+                quantities (e.g. {3, 5, 7, 9}) or relational tokens (rank, ratio,
+                sequence, intersection). Descriptive option content is forbidden.</li>
+            <li><strong>Bare stem.</strong> No keyword cue for what to count, no
+                instance lists. Concept-level disambiguation
+                (<em>“one-word reactions excluded”</em>) is allowed; instance-level
+                (<em>“must name supply / demand / substitutes”</em>) is not.</li>
+            <li><strong>Web-searchability.</strong> The stem is not solvable by a
+                Google search using the stem’s own wording — no episode-title
+                leak, no exact quotes &gt; 5 contiguous words, no top-comment-
+                content paraphrase.</li>
+            <li><strong>Predicate definition.</strong> The
+                <span class="mono">criterion_definition</span> field gives a verifiable
+                rule a third reader can apply to a comment without reading anything
+                else.</li>
+            <li><strong>Distractor sanity.</strong> Each wrong option corresponds to
+                a distinct <span class="mono">error_type</span> category
+                (<span class="mono">wrong_scope</span>,
+                <span class="mono">inverted_stance</span>,
+                <span class="mono">off_topic</span>, etc.); none is fabricated content
+                not present in the thread.</li>
+          </ol>
+        </li>
+        <li>
+          After answering, you submit
+          <strong>(a)</strong> your answer letter (A / B / C / D),
+          <strong>(b)</strong> the in-scope <span class="mono">node_ids</span> you
+          enumerated, and
+          <strong>(c)</strong> your per-comment include / exclude annotation for every
+          enumerated node. <strong>Joint agreement = (a) ∧ (b) ∧ (c) all match the
+          author</strong>; an item with the right answer but a different scope or
+          per-comment labelling does <em>not</em> count as agreeing.
+        </li>
+        <li>
+          On the <strong>Reveal page</strong> you will see your submission alongside the
+          author gold and the author’s <span class="mono">criterion_definition</span>.
+          If they disagree, you classify the disagreement under the Phase-7 protocol:
+          <span class="chip chip-blue">(a)&nbsp; reviewer misread</span>,
+          <span class="chip chip-green">(b)&nbsp; library clause attaches</span>, or
+          <span class="chip chip-amber">(c)&nbsp; question flaw → rewrite</span>. Library
+          clauses come from a pre-frozen criterion library; you select from a list, you
+          do not write new clauses.
+        </li>
+        <li>
+          The reward for a verified question is <strong>25&nbsp;CNY base + 50&nbsp;CNY
+          difficulty bonus</strong> when (i) the question is judged qualified and (ii)
+          your verification time is between 5 and 15 minutes. If random sampling shows
+          obvious cheating (instant answers, blindly choosing
+          <em>I don’t know this question</em>, or matching gold without enumerating
+          node IDs), all rewards for the account are revoked.
+        </li>
+      </ol>
+
+      <h2 class="page-section">II.&nbsp; Task Situation</h2>
+      <p class="subtle">
+        After reading the requirements above, click
+        <a href="solve.html"><strong>Start Verification</strong></a> in the top-right
+        corner. You will be assigned an episode + question and the timer will start.
+      </p>
+
+      <hr>
+      <p class="hint">
+        This portal is the artifact described in Appendix C of the SocialBench paper.
+        Five of its pages are screenshotted in the appendix; the populated content
+        below mirrors the worked example in Appendix B.3 (HN-46425198, the
+        <em>folx</em>-skepticism question, where reviewer answers&nbsp;A&nbsp;=&nbsp;4
+        and gold is&nbsp;B&nbsp;=&nbsp;5, resolved under Phase-7 (b)).
+      </p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

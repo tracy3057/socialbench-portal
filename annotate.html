@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280">
+  <title>SocialBench — Per-comment Annotation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="welcome">
+        <span>Welcome:&nbsp; reviewer-A</span>
+        <span class="logout">Logout</span>
+      </div>
+      <nav>
+        <a href="index.html">main</a>
+        <a href="index.html">Episode Verification</a>
+        <a href="solve.html">Question Verification</a>
+        <a href="annotate.html">Per-comment Annotation</a>
+        <a href="reveal.html">Reveal &amp; Resolve</a>
+        <a href="demographics.html">Sign Up</a>
+        <a href="demographics.html">Task Release</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+
+      <div class="crumb">
+        Episode <strong>HN-46425198</strong> &nbsp;·&nbsp; Question 11
+        &nbsp;·&nbsp; Step <strong>2 of 4</strong> &nbsp;·&nbsp; Timer&nbsp;
+        <span class="mono">09 m 32 s</span>
+      </div>
+
+      <h1 class="page-title">Step 2 of 4 — Enumerate in-scope <code>node_ids</code> and label every comment</h1>
+      <p class="subtle italic">
+        Mandatory for capabilities C2 / C3 / C5 / C6.
+        <strong>Save&nbsp;&amp;&nbsp;Continue</strong> is disabled until every in-scope
+        node has an include / exclude label and the per-comment counts match the
+        answer you submitted on the previous page.
+      </p>
+
+      <div class="card" style="margin-top: 14px; background: #F3F4F6; border: none;">
+        <strong>Q</strong> &nbsp;·&nbsp;
+        largest top-level sub-discussion / explicit skepticism that
+        <code>folx</code> is used (substantive; one-liners excluded).
+        Your tentative answer: <strong style="color: var(--accent);">A&nbsp;=&nbsp;4</strong>.
+      </div>
+
+      <h2 class="page-section">In-scope nodes (11 direct replies under hn_c_42c8a)</h2>
+
+      <table style="margin-top: 8px;">
+        <thead>
+          <tr>
+            <th>node_id</th>
+            <th>depth</th>
+            <th>include / exclude</th>
+            <th style="width: 33%;">comment excerpt</th>
+            <th>your annotation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-mono">hn_c_42c8a01</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-amber">exclude (boundary?)</span></td>
+            <td class="italic">“I have never seen anyone use folx outside of online forums.”</td>
+            <td class="subtle">personal-experience report; <em>not sure</em> if direct skepticism — flagged for review</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a02</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-green">include</span></td>
+            <td class="italic">“This is just Twitter folx-talk, nobody says it irl.”</td>
+            <td class="subtle">explicit non-use claim</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a03</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-green">include</span></td>
+            <td class="italic">“It's a corporate-DEI thing — I don't think anyone outside HR uses it.”</td>
+            <td class="subtle">explicit skepticism with scope qualifier</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a04</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-green">include</span></td>
+            <td class="italic">“In my whole career I've heard `folx' spoken once.”</td>
+            <td class="subtle">explicit non-use claim (career frame)</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a05</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-green">include</span></td>
+            <td class="italic">“10 years in tech and I've literally never heard a coworker say it out loud.”</td>
+            <td class="subtle">explicit non-use claim (workplace frame)</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a06</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-red">exclude (endorse)</span></td>
+            <td class="italic">“I use it constantly — most of my Slack does too.”</td>
+            <td class="subtle">endorsement of use</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a07</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-red">exclude (endorse)</span></td>
+            <td class="italic">“It's used widely in queer-friendly spaces I'm in.”</td>
+            <td class="subtle">endorsement of use</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a08</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-red">exclude (endorse)</span></td>
+            <td class="italic">“Heard it from co-workers all the time.”</td>
+            <td class="subtle">endorsement of use</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a09</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-red">exclude (off-topic)</span></td>
+            <td class="italic">“Folx > folks visually anyway.”</td>
+            <td class="subtle">stylistic; not about usage</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a10</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-red">exclude (one-liner)</span></td>
+            <td class="italic">“+1”</td>
+            <td class="subtle">one-word reaction (library: bare-agreement exclusion)</td>
+          </tr>
+          <tr>
+            <td class="col-mono">hn_c_42c8a11</td>
+            <td class="mono">1</td>
+            <td><span class="chip chip-red">exclude (off-topic)</span></td>
+            <td class="italic">“Reminds me of `latinx' debate from 2018.”</td>
+            <td class="subtle">off-topic / tangent</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tally">
+        <div class="item"><span class="num">4</span><span class="lbl">include</span></div>
+        <div class="item"><span class="num">3</span><span class="lbl">exclude (endorse)</span></div>
+        <div class="item"><span class="num">2</span><span class="lbl">exclude (off-topic)</span></div>
+        <div class="item"><span class="num">1</span><span class="lbl">exclude (one-liner)</span></div>
+        <div class="item"><span class="num">1</span><span class="lbl">exclude (boundary?)</span></div>
+        <div class="agg">→ aggregated answer: 4 &nbsp; (option A)</div>
+      </div>
+
+      <div style="margin-top: 18px; display: flex; gap: 10px;">
+        <a href="reveal.html" class="btn btn-primary">Save &amp; Continue</a>
+        <button class="btn btn-grey"
+                data-demo-confirm="Re-opened the thread DAG in a side panel.">
+          Need more context? View thread DAG →
+        </button>
+      </div>
+
+      <p class="hint" style="margin-top: 14px;">
+        SocialBench-specific page. The author gold (revealed on the next step) marks
+        <span class="mono">hn_c_42c8a01</span> as <em>include</em> via a pre-frozen
+        library clause for personal-experience-of-non-encounter, raising the count to
+        5; that is the disagreement reviewer-A will see in Step 3.
+      </p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
