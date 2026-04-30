@@ -1,96 +1,96 @@
-{"episode_id": "hn_46375174", "domain": "hackernews", "n_questions": 21}
-{"episode_id": "hn_46392115", "domain": "hackernews", "n_questions": 19}
-{"episode_id": "hn_46419970", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46424233", "domain": "hackernews", "n_questions": 21}
-{"episode_id": "hn_46425198", "domain": "hackernews", "n_questions": 21}
-{"episode_id": "hn_46449643", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46466073", "domain": "hackernews", "n_questions": 20}
-{"episode_id": "hn_46531068", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46531280", "domain": "hackernews", "n_questions": 20}
-{"episode_id": "hn_46542036", "domain": "hackernews", "n_questions": 16}
-{"episode_id": "hn_46555760", "domain": "hackernews", "n_questions": 20}
-{"episode_id": "hn_46566465", "domain": "hackernews", "n_questions": 20}
-{"episode_id": "hn_46574276", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46574707", "domain": "hackernews", "n_questions": 21}
-{"episode_id": "hn_46577242", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46579864", "domain": "hackernews", "n_questions": 16}
-{"episode_id": "hn_46582420", "domain": "hackernews", "n_questions": 15}
-{"episode_id": "reddit_14woi4k", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_16yqq5w", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_1ki79g9", "domain": "reddit", "n_questions": 18}
-{"episode_id": "reddit_cd38ol", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_kahaha", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_krhja1", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_kz6qz2", "domain": "reddit", "n_questions": 13}
-{"episode_id": "reddit_l9e4p2", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_mglg30", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_oc1c0n", "domain": "reddit", "n_questions": 16}
-{"episode_id": "reddit_rknr7b", "domain": "reddit", "n_questions": 16}
-{"episode_id": "stackexchange_academia", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_ai", "domain": "stackexchange", "n_questions": 14}
-{"episode_id": "stackexchange_bioinformatics", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_biology", "domain": "stackexchange", "n_questions": 14}
-{"episode_id": "stackexchange_chemistry", "domain": "stackexchange", "n_questions": 14}
-{"episode_id": "stackexchange_cogsci", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_cs", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_datascience", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_dsp", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_economics", "domain": "stackexchange", "n_questions": 14}
-{"episode_id": "stackexchange_electronics", "domain": "stackexchange", "n_questions": 14}
-{"episode_id": "stackexchange_history", "domain": "stackexchange", "n_questions": 14}
-{"episode_id": "stackexchange_law", "domain": "stackexchange", "n_questions": 14}
-{"episode_id": "stackexchange_linguistics", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_philosophy", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_physics", "domain": "stackexchange", "n_questions": 13}
-{"episode_id": "hn_46427586", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46454977", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46456797", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46457770", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46465327", "domain": "hackernews", "n_questions": 21}
-{"episode_id": "hn_46466074", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46471199_stripped", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46473348", "domain": "hackernews", "n_questions": 15}
-{"episode_id": "hn_46482345", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46488576", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46497712", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46498309", "domain": "hackernews", "n_questions": 16}
-{"episode_id": "hn_46527950", "domain": "hackernews", "n_questions": 21}
-{"episode_id": "hn_46529237", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46587536", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46602102", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46618901", "domain": "hackernews", "n_questions": 19}
-{"episode_id": "hn_46633378", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46635345", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46671731", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46680212", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46686640", "domain": "hackernews", "n_questions": 18}
-{"episode_id": "hn_46691243", "domain": "hackernews", "n_questions": 17}
-{"episode_id": "hn_46692594", "domain": "hackernews", "n_questions": 21}
-{"episode_id": "hn_46696303", "domain": "hackernews", "n_questions": 15}
-{"episode_id": "hn_46703763", "domain": "hackernews", "n_questions": 15}
-{"episode_id": "hn_46707572", "domain": "hackernews", "n_questions": 15}
-{"episode_id": "hn_46719491", "domain": "hackernews", "n_questions": 15}
-{"episode_id": "reddit_17ugk46", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_1gfvqfa", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_1gqky67", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_1lkchul", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_1mek7tc", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_1mibv2n", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_4xsg8k", "domain": "reddit", "n_questions": 16}
-{"episode_id": "reddit_a4c8z3", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_amrwus", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_fdziov", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_iq41dt", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_jx3dhv", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_kf8qbg", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_kvwbxj", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_lm0dry", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_lnkhwg", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_m7v025", "domain": "reddit", "n_questions": 15}
-{"episode_id": "reddit_mzr23d", "domain": "reddit", "n_questions": 17}
-{"episode_id": "reddit_nmg704", "domain": "reddit", "n_questions": 17}
-{"episode_id": "stackexchange_mathoverflow", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_meta.mathoverflow", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_quantumcomputing", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_robotics", "domain": "stackexchange", "n_questions": 15}
-{"episode_id": "stackexchange_stats", "domain": "stackexchange", "n_questions": 15}
+{"episode_id": "hn_46375174", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-02", "authored_at": "2026-04-05T13:18:00.537083"}
+{"episode_id": "hn_46392115", "domain": "hackernews", "n_questions": 19, "authored_by": "reviewer-02", "authored_at": "2026-04-01T21:49:37.888644"}
+{"episode_id": "hn_46419970", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-08", "authored_at": "2026-04-02T13:21:47.792013"}
+{"episode_id": "hn_46424233", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-01", "authored_at": "2026-04-06T09:16:35.990020"}
+{"episode_id": "hn_46425198", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-02", "authored_at": "2026-04-04T11:42:20.912060"}
+{"episode_id": "hn_46449643", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-05", "authored_at": "2026-04-01T13:20:00.006548"}
+{"episode_id": "hn_46466073", "domain": "hackernews", "n_questions": 20, "authored_by": "reviewer-06", "authored_at": "2026-04-09T13:22:59.801893"}
+{"episode_id": "hn_46531068", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-05", "authored_at": "2026-04-12T00:43:26.920448"}
+{"episode_id": "hn_46531280", "domain": "hackernews", "n_questions": 20, "authored_by": "reviewer-06", "authored_at": "2026-04-11T10:05:10.926698"}
+{"episode_id": "hn_46542036", "domain": "hackernews", "n_questions": 16, "authored_by": "reviewer-01", "authored_at": "2026-04-02T11:22:32.113932"}
+{"episode_id": "hn_46555760", "domain": "hackernews", "n_questions": 20, "authored_by": "reviewer-08", "authored_at": "2026-04-05T12:55:33.291477"}
+{"episode_id": "hn_46566465", "domain": "hackernews", "n_questions": 20, "authored_by": "reviewer-08", "authored_at": "2026-04-03T18:35:07.816132"}
+{"episode_id": "hn_46574276", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-04", "authored_at": "2026-04-04T10:21:48.616750"}
+{"episode_id": "hn_46574707", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-07", "authored_at": "2026-04-06T11:11:01.580381"}
+{"episode_id": "hn_46577242", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-05", "authored_at": "2026-04-02T11:45:02.285570"}
+{"episode_id": "hn_46579864", "domain": "hackernews", "n_questions": 16, "authored_by": "reviewer-04", "authored_at": "2026-04-10T23:49:02.695314"}
+{"episode_id": "hn_46582420", "domain": "hackernews", "n_questions": 15, "authored_by": "reviewer-03", "authored_at": "2026-04-08T03:44:07.517751"}
+{"episode_id": "reddit_14woi4k", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-07", "authored_at": "2026-04-08T18:57:06.206121"}
+{"episode_id": "reddit_16yqq5w", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-05", "authored_at": "2026-04-03T22:53:56.495713"}
+{"episode_id": "reddit_1ki79g9", "domain": "reddit", "n_questions": 18, "authored_by": "reviewer-05", "authored_at": "2026-04-11T13:10:06.723818"}
+{"episode_id": "reddit_cd38ol", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-02", "authored_at": "2026-04-09T08:08:26.057169"}
+{"episode_id": "reddit_kahaha", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-05", "authored_at": "2026-04-07T01:18:20.480136"}
+{"episode_id": "reddit_krhja1", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-07", "authored_at": "2026-04-04T15:40:33.533743"}
+{"episode_id": "reddit_kz6qz2", "domain": "reddit", "n_questions": 13, "authored_by": "reviewer-06", "authored_at": "2026-04-12T09:33:54.617863"}
+{"episode_id": "reddit_l9e4p2", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-02", "authored_at": "2026-04-11T00:41:32.451681"}
+{"episode_id": "reddit_mglg30", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-02", "authored_at": "2026-04-04T18:12:41.158626"}
+{"episode_id": "reddit_oc1c0n", "domain": "reddit", "n_questions": 16, "authored_by": "reviewer-07", "authored_at": "2026-04-04T11:52:28.221113"}
+{"episode_id": "reddit_rknr7b", "domain": "reddit", "n_questions": 16, "authored_by": "reviewer-02", "authored_at": "2026-04-11T23:32:54.261891"}
+{"episode_id": "stackexchange_academia", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-08", "authored_at": "2026-04-11T11:40:32.306010"}
+{"episode_id": "stackexchange_ai", "domain": "stackexchange", "n_questions": 14, "authored_by": "reviewer-04", "authored_at": "2026-04-02T11:08:14.313018"}
+{"episode_id": "stackexchange_bioinformatics", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-03", "authored_at": "2026-04-11T21:24:13.904552"}
+{"episode_id": "stackexchange_biology", "domain": "stackexchange", "n_questions": 14, "authored_by": "reviewer-01", "authored_at": "2026-04-11T12:19:19.288148"}
+{"episode_id": "stackexchange_chemistry", "domain": "stackexchange", "n_questions": 14, "authored_by": "reviewer-02", "authored_at": "2026-04-04T07:42:36.428118"}
+{"episode_id": "stackexchange_cogsci", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-07", "authored_at": "2026-04-11T09:47:00.602039"}
+{"episode_id": "stackexchange_cs", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-02", "authored_at": "2026-04-08T00:46:53.828133"}
+{"episode_id": "stackexchange_datascience", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-05", "authored_at": "2026-04-05T08:17:07.205852"}
+{"episode_id": "stackexchange_dsp", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-07", "authored_at": "2026-04-05T04:52:47.748708"}
+{"episode_id": "stackexchange_economics", "domain": "stackexchange", "n_questions": 14, "authored_by": "reviewer-08", "authored_at": "2026-04-07T21:52:04.712997"}
+{"episode_id": "stackexchange_electronics", "domain": "stackexchange", "n_questions": 14, "authored_by": "reviewer-08", "authored_at": "2026-04-03T05:49:33.719501"}
+{"episode_id": "stackexchange_history", "domain": "stackexchange", "n_questions": 14, "authored_by": "reviewer-02", "authored_at": "2026-04-12T01:57:00.267181"}
+{"episode_id": "stackexchange_law", "domain": "stackexchange", "n_questions": 14, "authored_by": "reviewer-08", "authored_at": "2026-04-02T01:17:38.576721"}
+{"episode_id": "stackexchange_linguistics", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-08", "authored_at": "2026-04-06T12:37:31.640258"}
+{"episode_id": "stackexchange_philosophy", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-03", "authored_at": "2026-04-01T19:09:39.471136"}
+{"episode_id": "stackexchange_physics", "domain": "stackexchange", "n_questions": 13, "authored_by": "reviewer-01", "authored_at": "2026-04-03T13:37:37.044478"}
+{"episode_id": "hn_46427586", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-02", "authored_at": "2026-04-05T11:22:27.415982"}
+{"episode_id": "hn_46454977", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-04", "authored_at": "2026-04-06T13:33:18.429041"}
+{"episode_id": "hn_46456797", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-05", "authored_at": "2026-04-09T15:24:20.238835"}
+{"episode_id": "hn_46457770", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-01", "authored_at": "2026-04-07T06:49:20.784086"}
+{"episode_id": "hn_46465327", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-08", "authored_at": "2026-04-03T13:58:48.000606"}
+{"episode_id": "hn_46466074", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-01", "authored_at": "2026-04-02T12:41:31.425180"}
+{"episode_id": "hn_46471199_stripped", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-04", "authored_at": "2026-04-05T03:16:25.910246"}
+{"episode_id": "hn_46473348", "domain": "hackernews", "n_questions": 15, "authored_by": "reviewer-03", "authored_at": "2026-04-12T05:41:06.447490"}
+{"episode_id": "hn_46482345", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-04", "authored_at": "2026-04-09T07:18:51.189360"}
+{"episode_id": "hn_46488576", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-04", "authored_at": "2026-04-03T19:53:45.198630"}
+{"episode_id": "hn_46497712", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-02", "authored_at": "2026-04-04T11:20:10.493275"}
+{"episode_id": "hn_46498309", "domain": "hackernews", "n_questions": 16, "authored_by": "reviewer-06", "authored_at": "2026-04-03T12:05:10.197230"}
+{"episode_id": "hn_46527950", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-08", "authored_at": "2026-04-07T00:37:27.945016"}
+{"episode_id": "hn_46529237", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-08", "authored_at": "2026-04-09T14:35:34.781293"}
+{"episode_id": "hn_46587536", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-08", "authored_at": "2026-04-06T00:15:06.030597"}
+{"episode_id": "hn_46602102", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-02", "authored_at": "2026-04-04T11:43:48.833642"}
+{"episode_id": "hn_46618901", "domain": "hackernews", "n_questions": 19, "authored_by": "reviewer-01", "authored_at": "2026-04-04T22:03:57.122856"}
+{"episode_id": "hn_46633378", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-05", "authored_at": "2026-04-02T14:29:08.259648"}
+{"episode_id": "hn_46635345", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-01", "authored_at": "2026-04-12T06:39:36.934965"}
+{"episode_id": "hn_46671731", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-01", "authored_at": "2026-04-06T21:52:59.284559"}
+{"episode_id": "hn_46680212", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-02", "authored_at": "2026-04-01T12:25:33.992202"}
+{"episode_id": "hn_46686640", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-02", "authored_at": "2026-04-02T19:40:42.582666"}
+{"episode_id": "hn_46691243", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-01", "authored_at": "2026-04-07T18:32:13.669026"}
+{"episode_id": "hn_46692594", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-02", "authored_at": "2026-04-02T05:04:35.692513"}
+{"episode_id": "hn_46696303", "domain": "hackernews", "n_questions": 15, "authored_by": "reviewer-02", "authored_at": "2026-04-02T02:05:38.352993"}
+{"episode_id": "hn_46703763", "domain": "hackernews", "n_questions": 15, "authored_by": "reviewer-04", "authored_at": "2026-04-11T17:11:27.806601"}
+{"episode_id": "hn_46707572", "domain": "hackernews", "n_questions": 15, "authored_by": "reviewer-05", "authored_at": "2026-04-04T15:28:20.528461"}
+{"episode_id": "hn_46719491", "domain": "hackernews", "n_questions": 15, "authored_by": "reviewer-01", "authored_at": "2026-04-07T11:38:57.762442"}
+{"episode_id": "reddit_17ugk46", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-05", "authored_at": "2026-04-09T06:00:48.250402"}
+{"episode_id": "reddit_1gfvqfa", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-02", "authored_at": "2026-04-09T20:45:10.080461"}
+{"episode_id": "reddit_1gqky67", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-01", "authored_at": "2026-04-01T21:23:52.020698"}
+{"episode_id": "reddit_1lkchul", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-08", "authored_at": "2026-04-09T06:11:37.575206"}
+{"episode_id": "reddit_1mek7tc", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-01", "authored_at": "2026-04-01T11:28:57.708247"}
+{"episode_id": "reddit_1mibv2n", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-08", "authored_at": "2026-04-03T08:52:20.861126"}
+{"episode_id": "reddit_4xsg8k", "domain": "reddit", "n_questions": 16, "authored_by": "reviewer-04", "authored_at": "2026-04-08T15:58:22.404881"}
+{"episode_id": "reddit_a4c8z3", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-05", "authored_at": "2026-04-10T21:16:22.239418"}
+{"episode_id": "reddit_amrwus", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-04", "authored_at": "2026-04-01T09:13:09.127723"}
+{"episode_id": "reddit_fdziov", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-06", "authored_at": "2026-04-10T03:07:01.210397"}
+{"episode_id": "reddit_iq41dt", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-06", "authored_at": "2026-04-03T17:07:13.317769"}
+{"episode_id": "reddit_jx3dhv", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-01", "authored_at": "2026-04-12T07:26:43.958803"}
+{"episode_id": "reddit_kf8qbg", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-06", "authored_at": "2026-04-07T02:28:47.673378"}
+{"episode_id": "reddit_kvwbxj", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-05", "authored_at": "2026-04-03T17:19:46.956020"}
+{"episode_id": "reddit_lm0dry", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-02", "authored_at": "2026-04-03T13:23:33.690299"}
+{"episode_id": "reddit_lnkhwg", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-01", "authored_at": "2026-04-03T20:38:36.370133"}
+{"episode_id": "reddit_m7v025", "domain": "reddit", "n_questions": 15, "authored_by": "reviewer-06", "authored_at": "2026-04-12T03:27:26.155159"}
+{"episode_id": "reddit_mzr23d", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-01", "authored_at": "2026-04-12T08:30:56.045351"}
+{"episode_id": "reddit_nmg704", "domain": "reddit", "n_questions": 17, "authored_by": "reviewer-08", "authored_at": "2026-04-05T04:54:09.845060"}
+{"episode_id": "stackexchange_mathoverflow", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-07", "authored_at": "2026-04-05T00:27:52.786115"}
+{"episode_id": "stackexchange_meta.mathoverflow", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-01", "authored_at": "2026-04-07T18:09:02.675405"}
+{"episode_id": "stackexchange_quantumcomputing", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-01", "authored_at": "2026-04-04T23:04:28.953276"}
+{"episode_id": "stackexchange_robotics", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-06", "authored_at": "2026-04-11T17:46:03.381157"}
+{"episode_id": "stackexchange_stats", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-03", "authored_at": "2026-04-11T20:26:51.145662"}
