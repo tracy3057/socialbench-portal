@@ -42,19 +42,17 @@
 {"episode_id": "stackexchange_linguistics", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-08", "authored_at": "2026-04-06T12:37:31.640258"}
 {"episode_id": "stackexchange_philosophy", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-03", "authored_at": "2026-04-01T19:09:39.471136"}
 {"episode_id": "stackexchange_physics", "domain": "stackexchange", "n_questions": 13, "authored_by": "reviewer-01", "authored_at": "2026-04-03T13:37:37.044478"}
-{"episode_id": "hn_46427586", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-02", "authored_at": "2026-04-05T11:22:27.415982"}
+{"episode_id": "hn_46427586", "domain": "hackernews", "n_questions": 14, "authored_by": "reviewer-02", "authored_at": "2026-04-05T11:22:27.415982"}
 {"episode_id": "hn_46454977", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-04", "authored_at": "2026-04-06T13:33:18.429041"}
 {"episode_id": "hn_46456797", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-05", "authored_at": "2026-04-09T15:24:20.238835"}
 {"episode_id": "hn_46457770", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-01", "authored_at": "2026-04-07T06:49:20.784086"}
 {"episode_id": "hn_46465327", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-08", "authored_at": "2026-04-03T13:58:48.000606"}
 {"episode_id": "hn_46466074", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-01", "authored_at": "2026-04-02T12:41:31.425180"}
-{"episode_id": "hn_46471199_stripped", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-04", "authored_at": "2026-04-05T03:16:25.910246"}
 {"episode_id": "hn_46473348", "domain": "hackernews", "n_questions": 15, "authored_by": "reviewer-03", "authored_at": "2026-04-12T05:41:06.447490"}
 {"episode_id": "hn_46482345", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-04", "authored_at": "2026-04-09T07:18:51.189360"}
 {"episode_id": "hn_46488576", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-04", "authored_at": "2026-04-03T19:53:45.198630"}
 {"episode_id": "hn_46497712", "domain": "hackernews", "n_questions": 18, "authored_by": "reviewer-02", "authored_at": "2026-04-04T11:20:10.493275"}
 {"episode_id": "hn_46498309", "domain": "hackernews", "n_questions": 16, "authored_by": "reviewer-06", "authored_at": "2026-04-03T12:05:10.197230"}
-{"episode_id": "hn_46527950", "domain": "hackernews", "n_questions": 21, "authored_by": "reviewer-08", "authored_at": "2026-04-07T00:37:27.945016"}
 {"episode_id": "hn_46529237", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-08", "authored_at": "2026-04-09T14:35:34.781293"}
 {"episode_id": "hn_46587536", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-08", "authored_at": "2026-04-06T00:15:06.030597"}
 {"episode_id": "hn_46602102", "domain": "hackernews", "n_questions": 17, "authored_by": "reviewer-02", "authored_at": "2026-04-04T11:43:48.833642"}
@@ -93,4 +91,4 @@
 {"episode_id": "stackexchange_meta.mathoverflow", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-01", "authored_at": "2026-04-07T18:09:02.675405"}
 {"episode_id": "stackexchange_quantumcomputing", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-01", "authored_at": "2026-04-04T23:04:28.953276"}
 {"episode_id": "stackexchange_robotics", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-06", "authored_at": "2026-04-11T17:46:03.381157"}
-{"episode_id": "stackexchange_stats", "domain": "stackexchange", "n_questions": 15, "authored_by": "reviewer-03", "authored_at": "2026-04-11T20:26:51.145662"}
+{"episode_id": "stackexchange_stats", "domain": "stackexchange", "n_questions": 14, "authored_by": "reviewer-03", "authored_at": "2026-04-11T20:26:51.145662"}
