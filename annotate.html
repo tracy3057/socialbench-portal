@@ -84,7 +84,7 @@
     'use strict';
     const cfg = window.SOCIALBENCH_SUPABASE || {};
     if (!cfg.url || !cfg.anon_key || cfg.anon_key === 'REPLACE_WITH_ANON_KEY') {
-      document.getElementById('crumb').textContent = 'Supabase config missing.';
+      document.getElementById('crumb').textContent = 'Backend config missing.';
       return;
     }
     const sb = window.supabase.createClient(cfg.url, cfg.anon_key);

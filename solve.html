@@ -37,7 +37,7 @@
     <main class="main">
 
       <div class="crumb" id="crumb">
-        Loading question from Supabase…
+        Loading question from the backend…
       </div>
 
       <h1 class="page-title">Please read the thread DAG and answer the question</h1>
@@ -110,13 +110,13 @@
   <script src="config.js"></script>
   <script src="app.js"></script>
   <script>
-  // Question Verification page logic — fetches one question from Supabase
+  // Question Verification page logic — fetches one question from the backend
   (function () {
     'use strict';
     const cfg = window.SOCIALBENCH_SUPABASE || {};
     if (!cfg.url || !cfg.anon_key || cfg.anon_key === 'REPLACE_WITH_ANON_KEY') {
       document.getElementById('crumb').textContent =
-        'Supabase config missing — edit config.js with your anon key.';
+        'Backend config missing — edit config.js with your anon key.';
       return;
     }
     const sb = window.supabase.createClient(cfg.url, cfg.anon_key);

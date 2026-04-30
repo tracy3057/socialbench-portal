@@ -39,7 +39,7 @@
       <p class="subtle italic">
         Compare your submission with the gold author. If they disagree, classify
         the disagreement under the Phase-7 protocol. Submitting writes a row to
-        Supabase as Reviewer-C with all three gates and Phase-7 outcome
+        the backend as Reviewer-C with all three gates and Phase-7 outcome
         recorded.
       </p>
 
@@ -81,7 +81,7 @@
 
           <div style="margin-top: 16px;">
             <button class="btn btn-primary btn-block" id="btn-submit" style="max-width: 360px;">
-              Submit verification (write to Supabase)
+              Submit verification (write to backend)
             </button>
             <div id="submit-msg" class="hint" style="margin-top: 8px;"></div>
           </div>
@@ -98,7 +98,7 @@
     'use strict';
     const cfg = window.SOCIALBENCH_SUPABASE || {};
     if (!cfg.url || !cfg.anon_key || cfg.anon_key === 'REPLACE_WITH_ANON_KEY') {
-      document.getElementById('crumb').textContent = 'Supabase config missing.';
+      document.getElementById('crumb').textContent = 'Backend config missing.';
       return;
     }
     const sb = window.supabase.createClient(cfg.url, cfg.anon_key);
