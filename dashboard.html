@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280">
+  <title>SocialBench Verification Portal — Live Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: 18px 0;
+    }
+    .stat-card {
+      background: var(--bg-soft, #f8fafb);
+      border: 1px solid var(--border, #e2e6eb);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .stat-card .label  { font-size: 12px; color: var(--text-muted, #6b7280); text-transform: uppercase; letter-spacing: .03em; }
+    .stat-card .value  { font-size: 28px; font-weight: 600; color: var(--text, #111827); margin-top: 4px; }
+    .stat-card .meta   { font-size: 12px; color: var(--text-muted, #6b7280); margin-top: 4px; }
+    table.dash         { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13.5px; }
+    table.dash th, table.dash td { padding: 8px 10px; border-bottom: 1px solid var(--border, #e2e6eb); }
+    table.dash th      { text-align: left; font-weight: 600; background: #f3f4f6; }
+    table.dash td.num  { text-align: right; font-variant-numeric: tabular-nums; }
+    .bar-wrap          { display: inline-block; width: 100px; height: 8px; background: #e5e7eb; border-radius: 4px; vertical-align: middle; margin-left: 8px; }
+    .bar-fill          { height: 8px; background: #16a34a; border-radius: 4px; }
+    .bar-fill.amber    { background: #f59e0b; }
+    .bar-fill.red      { background: #dc2626; }
+    #loading           { color: #6b7280; font-style: italic; }
+    .refresh           { float: right; font-size: 12px; cursor: pointer; color: #2563eb; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="welcome">
+        <span>Welcome:&nbsp; reviewer-A</span>
+        <span class="logout">Logout</span>
+      </div>
+      <nav>
+        <a href="dashboard.html">Live Dashboard</a>
+        <a href="index.html">Guidelines</a>
+        <a href="solve.html">Question Verification</a>
+        <a href="annotate.html">Per-comment Annotation</a>
+        <a href="reveal.html">Reveal &amp; Resolve</a>
+        <a href="demographics.html">Sign Up</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <h1 class="page-title">
+        SocialBench Live Verification Dashboard
+        <span class="refresh" id="btn-refresh">↻ refresh</span>
+      </h1>
+      <p class="subtle">
+        Aggregated from <code>review_sessions</code> in Supabase (project
+        <code>mhwidvkomofdpwohqaum</code>). Numbers refresh on page load
+        and on the <em>refresh</em> button.
+      </p>
+
+      <div id="loading">Loading live data from Supabase…</div>
+
+      <!-- ─── headline stat cards ─── -->
+      <div class="stat-grid" id="cards" style="display:none;">
+        <div class="stat-card">
+          <div class="label">Episodes</div>
+          <div class="value" id="c-eps">—</div>
+          <div class="meta">released, post-Phase-7 qualified</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Questions</div>
+          <div class="value" id="c-qs">—</div>
+          <div class="meta">canonical release</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Phase-6 first-pass joint A-vs-B</div>
+          <div class="value" id="c-joint">—</div>
+          <div class="meta" id="c-joint-meta">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Phase-7 firings (a / b / c)</div>
+          <div class="value" id="c-p7">—</div>
+          <div class="meta">(a) gold-correct · (b) clause-attached · (c) rescope</div>
+        </div>
+      </div>
+
+      <!-- ─── per-gate ─── -->
+      <h2 class="page-section">Step-by-step gates (Stage 4 of framework)</h2>
+      <table class="dash" id="t-gates" style="display:none;">
+        <thead><tr><th>Gate</th><th class="num">Resolved</th><th class="num">Passed</th><th class="num">Pass rate</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- ─── per-domain ─── -->
+      <h2 class="page-section">By domain</h2>
+      <table class="dash" id="t-domain" style="display:none;">
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th class="num">#&nbsp;eps</th><th class="num">#&nbsp;Qs</th>
+            <th class="num">Gate&nbsp;1</th><th class="num">Gate&nbsp;2</th>
+            <th class="num">Gate&nbsp;3</th><th class="num">Joint</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- ─── per-episode ─── -->
+      <h2 class="page-section">Per-episode coverage</h2>
+      <p class="subtle"><em>Top-50 by joint pass rate; click a row to open
+        Question Verification on that episode.</em></p>
+      <table class="dash" id="t-eps" style="display:none;">
+        <thead>
+          <tr>
+            <th>Episode</th><th>Domain</th>
+            <th class="num">#&nbsp;Qs</th>
+            <th class="num">Gate&nbsp;1 pass</th>
+            <th class="num">Joint pass</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+  </div>
+
+  <!-- Supabase JS SDK (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

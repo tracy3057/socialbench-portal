@@ -8,163 +8,203 @@
 </head>
 <body>
   <div class="app">
-
     <aside class="sidebar">
       <div class="welcome">
         <span>Welcome:&nbsp; reviewer-A</span>
         <span class="logout">Logout</span>
       </div>
       <nav>
-        <a href="index.html">main</a>
-        <a href="index.html">Episode Verification</a>
+        <a href="dashboard.html">Live Dashboard</a>
+        <a href="index.html">Guidelines</a>
         <a href="solve.html">Question Verification</a>
         <a href="annotate.html">Per-comment Annotation</a>
         <a href="reveal.html">Reveal &amp; Resolve</a>
         <a href="demographics.html">Sign Up</a>
-        <a href="demographics.html">Task Release</a>
       </nav>
     </aside>
 
     <main class="main">
-
-      <div class="crumb">
-        Episode <strong>HN-46425198</strong> &nbsp;·&nbsp; Question 11
-        &nbsp;·&nbsp; Step <strong>3 of 4</strong> &nbsp;·&nbsp; Total time
-        <span class="mono">11 m 32 s</span>
-      </div>
-
-      <h1 class="page-title">Reveal: your verification vs. author gold</h1>
-      <p class="subtle">
-        Q&nbsp;·&nbsp; HN-46425198&nbsp;·&nbsp; largest top-level sub-discussion
-        &nbsp;·&nbsp; explicit skepticism re&nbsp;<code>folx</code>&nbsp;use.
+      <div class="crumb" id="crumb">Loading…</div>
+      <h1 class="page-title">Reveal &amp; Resolve</h1>
+      <p class="subtle italic">
+        Compare your submission with the gold author. If they disagree, classify
+        the disagreement under the Phase-7 protocol. Submitting writes a row to
+        Supabase as Reviewer-C with all three gates and Phase-7 outcome
+        recorded.
       </p>
 
-      <!-- ----- two-column comparison ----- -->
-      <div class="grid-2" style="margin-top: 14px;">
-        <div class="card">
-          <h3 style="margin: 0 0 10px 0; font-size: 14px;">
-            Your submission &nbsp;<span class="chip chip-blue">reviewer-A</span>
-          </h3>
-          <table>
-            <tr><td class="subtle" style="width: 38%;">Chosen answer</td>
-                <td class="mono"><strong>A</strong> &nbsp;(= 4 in-scope skepticism)</td></tr>
-            <tr><td class="subtle">Enumerated <span class="mono">node_ids</span></td>
-                <td class="mono">11 nodes &nbsp;·&nbsp; hn_c_42c8a01–11</td></tr>
-            <tr><td class="subtle">Per-comment include / exclude</td>
-                <td class="mono">include 4 &nbsp;·&nbsp; exclude 7
-                <br><span class="subtle" style="font-family: inherit;">
-                  (~01 excluded as boundary; 02–05 included)</span></td></tr>
-            <tr><td class="subtle">Confidence</td>
-                <td class="mono">HIGH</td></tr>
-          </table>
-        </div>
-
-        <div class="card">
-          <h3 style="margin: 0 0 10px 0; font-size: 14px;">
-            Author gold &nbsp;<span class="chip chip-green">canonical</span>
-          </h3>
-          <table>
-            <tr><td class="subtle" style="width: 38%;">Chosen answer</td>
-                <td class="mono"><strong>B</strong> &nbsp;(= 5 in-scope skepticism)</td></tr>
-            <tr><td class="subtle">Enumerated <span class="mono">node_ids</span></td>
-                <td class="mono">11 nodes &nbsp;·&nbsp; identical (Jaccard 1.00)</td></tr>
-            <tr><td class="subtle">Per-comment include / exclude</td>
-                <td class="mono">include 5 &nbsp;·&nbsp; exclude 6
-                <br><span class="subtle" style="font-family: inherit;">
-                  (~01–05 included; library clause attaches)</span></td></tr>
-            <tr><td class="subtle">Confidence</td>
-                <td class="mono">HIGH</td></tr>
-          </table>
-        </div>
-      </div>
-
-      <!-- ----- joint-agreement banner ----- -->
-      <div class="banner-warn">
-        Joint agreement: <strong>NO</strong> &nbsp;·&nbsp;
-        scope match (<span style="color: var(--good);">✓ Jaccard 1.00</span>),
-        per-comment-label mismatch on <span class="mono">hn_c_42c8a01</span>
-        (per-comment macro-F1 0.91), answer mismatch
-        <span class="mono">A&nbsp;=&nbsp;4 vs B&nbsp;=&nbsp;5</span>.
-      </div>
-
-      <!-- ----- author evidence ----- -->
-      <h2 class="page-section">Author <code>criterion_definition</code> + evidence</h2>
-      <div class="card" style="background: #FAFAFA; font-family: inherit; line-height: 1.6;">
-        “Count direct replies (depth-1 children) under the largest top-level
-        sub-discussion's root that contain a <strong>substantive claim challenging
-        actual usage</strong> of the term <code>folx</code> in practice.
-        <strong>Personal-experience reports of non-encounter</strong> (e.g.
-        <em>‘I have never seen X used’</em>) count as explicit skepticism, because
-        they constitute a substantive claim about actual usage rather than a bare
-        reaction. Bare agreements (<em>‘+1’</em>, <em>‘agreed’</em>) and one-word
-        reactions are excluded. Off-topic / stylistic / meta comments are excluded.”
-        <br><br>
-        The 5th included comment is <span class="mono">hn_c_42c8a01</span>:
-        <em>“I have never seen anyone use folx outside of online forums.”</em>
-        Author reading: this is a personal-experience non-encounter and the
-        criterion-library clause <span class="mono">personal-experience-non-encounter-as-skepticism</span>
-        applies. Reviewer-A read it as a personal-experience report and excluded
-        it — the disagreement is exactly the boundary case that pre-frozen
-        library clause was designed to resolve.
-      </div>
-
-      <!-- ----- (a)/(b)/(c) classification ----- -->
-      <h2 class="page-section">How should this disagreement be resolved?
-        <span class="subtle" style="font-weight: 400;">&nbsp;(Phase-7 protocol — exactly one)</span>
-      </h2>
-
-      <label class="radio-row" for="opt-a">
-        <input type="radio" id="opt-a" name="phase7">
+      <div class="grid-side" style="margin-top: 18px;">
         <div>
-          <div class="head">(a)&nbsp; Reviewer misread &nbsp;
-            <span class="chip chip-blue">no change to gold</span></div>
-          <div class="body">
-            I missed a signal that the bare stem clearly already required.
-            Gold stands; my submission is logged as a misread.
+          <div class="card">
+            <h2 style="margin: 0 0 10px 0; font-size: 14px;">Your submission (Reviewer C)</h2>
+            <table style="font-size: 13px;" id="t-mine"></table>
+          </div>
+          <div class="card card-info" style="margin-top: 12px;">
+            <h2 style="margin: 0 0 10px 0; font-size: 14px;">Gold author (Reviewer A)</h2>
+            <table style="font-size: 13px;" id="t-gold"></table>
           </div>
         </div>
-      </label>
 
-      <label class="radio-row selected" for="opt-b">
-        <input type="radio" id="opt-b" name="phase7" checked>
         <div>
-          <div class="head">(b)&nbsp; Library clause attaches &nbsp;
-            <span class="chip chip-green">attach to <code>criterion_definition</code></span></div>
-          <div class="body">
-            The disagreement is a known boundary case that matches a pre-frozen
-            library clause:
-            <em>“personal-experience reports of non-encounter (e.g. ‘I have never seen X used’)
-            count as explicit skepticism.”</em>
-            The clause is appended to the question's
-            <span class="mono">criterion_definition</span> so the rule is explicit on
-            this question; gold remains 5; my count rises to 5 once the clause is applied.
+          <div class="card">
+            <h2 style="margin: 0 0 10px 0; font-size: 14px;">Three-gate joint check</h2>
+            <table style="font-size: 13px;" id="t-gates"></table>
+          </div>
+
+          <div class="card" style="margin-top: 12px; display: none;" id="card-p7">
+            <h2 style="margin: 0 0 10px 0; font-size: 14px;">Phase-7 classification (only if disagreement)</h2>
+            <div class="radio-row" style="margin: 4px 0;">
+              <input type="radio" name="p7" id="p7-a" value="a">
+              <label for="p7-a"><strong>(a)</strong> Reviewer misread — A's gold is correct, my read was sloppy.</label>
+            </div>
+            <div class="radio-row" style="margin: 4px 0;">
+              <input type="radio" name="p7" id="p7-b" value="b">
+              <label for="p7-b"><strong>(b)</strong> Library clause attaches — boundary case for the criterion.</label>
+            </div>
+            <div class="radio-row" style="margin: 4px 0;">
+              <input type="radio" name="p7" id="p7-c" value="c">
+              <label for="p7-c"><strong>(c)</strong> Question flaw — locator wrong / stem unfixable; rewrite needed.</label>
+            </div>
+            <textarea id="p7-summary" placeholder="Brief change_summary (one sentence)"
+              style="width: 100%; margin-top: 10px; padding: 8px; font-size: 13px;" rows="3"></textarea>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <button class="btn btn-primary btn-block" id="btn-submit" style="max-width: 360px;">
+              Submit verification (write to Supabase)
+            </button>
+            <div id="submit-msg" class="hint" style="margin-top: 8px;"></div>
           </div>
         </div>
-      </label>
-
-      <label class="radio-row" for="opt-c">
-        <input type="radio" id="opt-c" name="phase7">
-        <div>
-          <div class="head">(c)&nbsp; Question flaw → rewrite &nbsp;
-            <span class="chip chip-amber">rewrite required</span></div>
-          <div class="body">
-            The stem itself is ambiguous beyond what any library clause can fix.
-            Rewrite via one of: stem clarification &middot; question-form change
-            (e.g. exact-count → odd-one-out) &middot; locator re-scope.
-          </div>
-        </div>
-      </label>
-
-      <hr>
-      <div style="display: flex; gap: 10px; align-items: center;">
-        <a href="demographics.html" class="btn btn-primary">Submit Review</a>
-        <span class="hint">
-          After-resolve: reviewer count rises to <strong>5</strong>;
-          gold unchanged; library clause logged for this question.
-        </span>
       </div>
     </main>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
   <script src="app.js"></script>
+  <script>
+  (function () {
+    'use strict';
+    const cfg = window.SOCIALBENCH_SUPABASE || {};
+    if (!cfg.url || !cfg.anon_key || cfg.anon_key === 'REPLACE_WITH_ANON_KEY') {
+      document.getElementById('crumb').textContent = 'Supabase config missing.';
+      return;
+    }
+    const sb = window.supabase.createClient(cfg.url, cfg.anon_key);
+
+    const draft = JSON.parse(sessionStorage.getItem('socialbench_draft') || '{}');
+    const atoms = JSON.parse(sessionStorage.getItem('socialbench_atoms') || '[]');
+    if (!draft.question_id) {
+      document.getElementById('crumb').innerHTML =
+        'No draft — start from <a href="solve.html">Question Verification</a>.';
+      return;
+    }
+
+    const pct = (b) => b === true ? '✅' : (b === false ? '❌' : '—');
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const { data: q, error } = await sb.from('questions')
+        .select('*').eq('question_id', draft.question_id).single();
+      if (error) {
+        document.getElementById('crumb').textContent = 'Error: ' + error.message;
+        return;
+      }
+
+      const goldEv = q.evidence_node_ids || [];
+      const myScope = atoms.map(a => a.node_id);
+      const myIncludes = atoms.filter(a => a.category === 'include').map(a => a.node_id);
+      const myExcludes = atoms.filter(a => a.category === 'excluded').map(a => a.node_id);
+
+      // Compute three gates locally
+      const g1 = (draft.chosen_idx === q.gold_chosen_idx);
+      const scopeSet = new Set(myScope);
+      const g2 = goldEv.length ? goldEv.every(n => scopeSet.has(n)) : null;
+      const overlap = goldEv.filter(n => scopeSet.has(n));
+      const contradicted = overlap.filter(n => myExcludes.includes(n));
+      const g3 = overlap.length ? (contradicted.length === 0) : null;
+      const joint = (g1 === true && g2 !== false && g3 !== false);
+
+      document.getElementById('crumb').innerHTML =
+        `Episode <strong>${q.episode_id}</strong> · Question ${q.question_id} · Step <strong>4 of 4</strong>`;
+
+      document.getElementById('t-mine').innerHTML = `
+        <tr><td class="subtle">Chosen idx</td><td class="mono">${draft.chosen_idx} (${draft.chosen_letter || '?'})</td></tr>
+        <tr><td class="subtle">Confidence</td><td class="mono">${draft.confidence || '?'}</td></tr>
+        <tr><td class="subtle">Scope size</td><td class="mono">${myScope.length}</td></tr>
+        <tr><td class="subtle">Includes</td><td class="mono">${myIncludes.length}</td></tr>
+        <tr><td class="subtle">Excludes</td><td class="mono">${myExcludes.length}</td></tr>
+      `;
+      document.getElementById('t-gold').innerHTML = `
+        <tr><td class="subtle">Chosen idx</td><td class="mono">${q.gold_chosen_idx} (${q.gold_letter || '?'})</td></tr>
+        <tr><td class="subtle">Evidence atoms</td><td class="mono">${goldEv.length}</td></tr>
+        <tr><td class="subtle">Criterion</td><td><em style="font-size:12px;">${(q.criterion_definition || '').slice(0, 300)}…</em></td></tr>
+      `;
+      document.getElementById('t-gates').innerHTML = `
+        <tr><td>Gate 1 — same answer index</td><td>${pct(g1)}</td></tr>
+        <tr><td>Gate 2 — A evidence ⊆ scope</td><td>${pct(g2)}</td></tr>
+        <tr><td>Gate 3 — atom labels not contradicted</td><td>${pct(g3)}</td></tr>
+        <tr><td><strong>Joint</strong></td><td>${pct(joint)}</td></tr>
+      `;
+
+      if (!joint) {
+        document.getElementById('card-p7').style.display = 'block';
+      }
+
+      document.getElementById('btn-submit').addEventListener('click', async () => {
+        const p7Decision = document.querySelector('input[name="p7"]:checked')?.value || null;
+        const p7Summary  = document.getElementById('p7-summary')?.value || null;
+
+        if (!joint && !p7Decision) {
+          alert('Please pick a Phase-7 (a)/(b)/(c) classification before submitting.');
+          return;
+        }
+        document.getElementById('submit-msg').textContent = 'Submitting…';
+
+        const row = {
+          question_id: q.question_id,
+          episode_id:  q.episode_id,
+          domain:      q.domain || null,
+          reviewer_role: 'C',
+          chosen_idx:  draft.chosen_idx,
+          chosen_letter: draft.chosen_letter,
+          enumerated_node_ids:  myScope,
+          per_atom_annotations: atoms,
+          aggregation: null,
+          reasoning:   null,
+          confidence:  draft.confidence,
+          judge_unambiguous: null,
+          gate1_match: g1,
+          gate2_match: g2,
+          gate3_match: g3,
+          joint_match: joint,
+          phase7_decision: p7Decision,
+          phase7_change_summary: p7Summary,
+          source_label: 'agent_C',
+          source_path:  'portal',
+        };
+
+        const { error: insertErr } = await sb.from('review_sessions').insert(row);
+        if (insertErr) {
+          document.getElementById('submit-msg').textContent = 'Error: ' + insertErr.message;
+          return;
+        }
+        if (p7Decision) {
+          await sb.from('phase7_decisions').insert({
+            question_id: q.question_id,
+            episode_id:  q.episode_id,
+            decision:    p7Decision,
+            change_summary: p7Summary,
+          });
+        }
+        document.getElementById('submit-msg').innerHTML =
+          'Saved. <a href="dashboard.html">Back to dashboard</a> · '
+          + '<a href="solve.html">Verify another question</a>.';
+        sessionStorage.removeItem('socialbench_draft');
+        sessionStorage.removeItem('socialbench_atoms');
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

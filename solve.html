@@ -15,63 +15,58 @@
         <span class="logout">Logout</span>
       </div>
       <nav>
-        <a href="index.html">main</a>
-        <a href="index.html">Episode Verification</a>
+        <a href="dashboard.html">Live Dashboard</a>
+        <a href="index.html">Guidelines</a>
         <a href="solve.html">Question Verification</a>
         <a href="annotate.html">Per-comment Annotation</a>
         <a href="reveal.html">Reveal &amp; Resolve</a>
         <a href="demographics.html">Sign Up</a>
-        <a href="demographics.html">Task Release</a>
       </nav>
     </aside>
 
     <main class="main">
 
-      <div class="crumb">
-        Episode <strong>HN-46425198</strong> &nbsp;·&nbsp; Question 11 (capability C3, pattern G)
-        &nbsp;·&nbsp; Step <strong>1 of 4</strong> &nbsp;·&nbsp; Timer&nbsp;
-        <span class="mono">04 m 18 s</span>
+      <div class="crumb" id="crumb">
+        Loading question from Supabase…
       </div>
 
       <h1 class="page-title">Please read the thread DAG and answer the question</h1>
 
-      <p class="subtle italic">
-        Episode HN-46425198 &nbsp;·&nbsp; 74 comments &nbsp;·&nbsp; max-depth 9
-        &nbsp;·&nbsp; thread DAG downloaded
-        (<a href="data/episode_hn_46425198.json">view JSON</a>).
-      </p>
+      <p class="subtle italic" id="ep-meta">…</p>
 
       <div class="grid-side" style="margin-top: 18px;">
-
-        <!-- ----- left column: question + options + buttons ----- -->
+        <!-- left column: question + options + buttons -->
         <div>
           <div class="card">
-            <div style="font-size: 14.5px; line-height: 1.6; color: var(--text);">
-              Within the largest top-level sub-discussion of this episode, how many
-              direct replies express <strong>explicit skepticism</strong> that the
-              term <code>folx</code> is actually used in practice?
-              <span class="subtle">(Substantive endorsement of skepticism required;
-              one-word reactions excluded.)</span>
+            <div id="q-text" style="font-size: 14.5px; line-height: 1.6; color: var(--text);">
+              …
             </div>
 
-            <div style="margin-top: 18px;">
-              <div style="margin: 6px 0;"><strong>(A)</strong>&nbsp;&nbsp; 3</div>
-              <div style="margin: 6px 0;"><strong>(B)</strong>&nbsp;&nbsp; 5</div>
-              <div style="margin: 6px 0;"><strong>(C)</strong>&nbsp;&nbsp; 7</div>
-              <div style="margin: 6px 0;"><strong>(D)</strong>&nbsp;&nbsp; 9</div>
+            <div id="q-options" style="margin-top: 18px;">
+              <!-- filled by JS -->
             </div>
 
             <div class="field-label">Please choose answer</div>
-            <select class="dropdown">
-              <option value="A" selected>A &nbsp;— &nbsp;3</option>
-              <option value="B">B &nbsp;— &nbsp;5</option>
-              <option value="C">C &nbsp;— &nbsp;7</option>
-              <option value="D">D &nbsp;— &nbsp;9</option>
+            <select class="dropdown" id="q-answer">
+              <option value="">-- select --</option>
+              <option value="0">A</option>
+              <option value="1">B</option>
+              <option value="2">C</option>
+              <option value="3">D</option>
+            </select>
+
+            <div class="field-label">Confidence</div>
+            <select class="dropdown" id="q-confidence">
+              <option value="HIGH">HIGH</option>
+              <option value="MEDIUM" selected>MEDIUM</option>
+              <option value="LOW">LOW</option>
             </select>
           </div>
 
           <div style="margin-top: 16px; max-width: 360px;">
-            <a href="annotate.html" class="btn btn-primary btn-block">Submit Answer</a>
+            <a href="annotate.html" class="btn btn-primary btn-block" id="btn-submit">
+              Submit Answer (continue to Annotate)
+            </a>
             <button class="btn btn-warn btn-block"
                     data-demo-confirm="Marked: question does not meet requirements.">
               Question does not meet requirements
@@ -83,49 +78,134 @@
           </div>
         </div>
 
-        <!-- ----- right column: reviewer state ----- -->
+        <!-- right column: reviewer state -->
         <div>
           <div class="card card-info">
-            <h2 style="margin: 0 0 10px 0; font-size: 14px;">Your verification state</h2>
-            <table style="font-size: 12.5px;">
-              <tr><td class="subtle" style="width: 130px; border: none;">Time elapsed</td>
-                  <td class="mono" style="border: none;">4 m 18 s</td></tr>
-              <tr><td class="subtle" style="border: none;">Comments read</td>
-                  <td class="mono" style="border: none;">74 / 74</td></tr>
-              <tr><td class="subtle" style="border: none;">Largest subtree</td>
-                  <td class="mono" style="border: none;">root = hn_c_42c8a</td></tr>
-              <tr><td class="subtle" style="border: none;">Direct replies</td>
-                  <td class="mono" style="border: none;">11 nodes</td></tr>
-              <tr><td class="subtle" style="border: none;">Tentative answer</td>
-                  <td class="mono" style="border: none; color: var(--accent);">
-                  A&nbsp;=&nbsp;4</td></tr>
-              <tr><td class="subtle" style="border: none;">Confidence</td>
-                  <td class="mono" style="border: none;">HIGH</td></tr>
+            <h2 style="margin: 0 0 10px 0; font-size: 14px;">Question metadata</h2>
+            <table style="font-size: 12.5px;" id="q-meta">
+              <!-- filled by JS -->
             </table>
             <hr>
             <div style="font-size: 12.5px; color: var(--text); line-height: 1.6;">
-              <strong>Reviewer reasoning so far:</strong>
-              <em>“4 of the 11 direct replies use explicit-skepticism markers
-              (<span class="mono">‘never seen anyone use it’</span>,
-              <span class="mono">‘just Twitter folx-talk’</span>, etc.). 3 endorse
-              the term, 3 are off-topic / stylistic, 1 is a one-liner. The 5th
-              candidate (<span class="mono">hn_c_42c8a01</span>) is a personal-experience
-              report — I read this as describing exposure rather than direct
-              skepticism, so I excluded it. Tentative answer: A = 4. Will enumerate
-              the in-scope <span class="mono">node_ids</span> next.”</em>
+              <strong>Criterion definition (from gold author):</strong>
+              <em id="q-criterion"></em>
             </div>
           </div>
-
-          <div class="hint" style="margin-top: 12px;">
-            Next step: enumerate the 11 in-scope <span class="mono">node_ids</span>
-            and assign per-comment include / exclude labels. The
-            <strong>Submit Answer</strong> button takes you there.
-          </div>
         </div>
-
       </div>
     </main>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
   <script src="app.js"></script>
+  <script>
+  // Question Verification page logic — fetches one question from Supabase
+  (function () {
+    'use strict';
+    const cfg = window.SOCIALBENCH_SUPABASE || {};
+    if (!cfg.url || !cfg.anon_key || cfg.anon_key === 'REPLACE_WITH_ANON_KEY') {
+      document.getElementById('crumb').textContent =
+        'Supabase config missing — edit config.js with your anon key.';
+      return;
+    }
+    const sb = window.supabase.createClient(cfg.url, cfg.anon_key);
+    const url = new URL(window.location.href);
+    const epId = url.searchParams.get('ep');
+    const qId  = url.searchParams.get('q');
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      let q;
+      let pickError = null;
+      try {
+        if (qId) {
+          const { data, error } = await sb.from('questions')
+            .select('*').eq('question_id', qId).single();
+          if (error) throw error;
+          q = data;
+        } else {
+          // Pick a random question from the requested episode (or any if none)
+          let qry = sb.from('v_pending_review').select('*');
+          if (epId) qry = qry.eq('episode_id', epId);
+          // Highest priority: redo_full > adjudicate > missing_b > spot_check
+          const { data, error } = await qry.limit(20);
+          if (error) throw error;
+          if (!data || !data.length) throw new Error('No pending questions');
+          // Pick the first redo_full / missing_b if present
+          const ranked = data.sort((a, b) => {
+            const r = { redo_full: 0, missing_b: 1, adjudicate: 2, spot_check: 3 };
+            return (r[a.priority] ?? 9) - (r[b.priority] ?? 9);
+          });
+          const pick = ranked[Math.floor(Math.random() * Math.min(5, ranked.length))];
+          const { data: full } = await sb.from('questions')
+            .select('*').eq('question_id', pick.question_id).single();
+          q = full;
+        }
+      } catch (e) { pickError = e.message || String(e); }
+
+      if (!q) {
+        document.getElementById('crumb').textContent =
+          'No question loaded' + (pickError ? `: ${pickError}` : '');
+        return;
+      }
+
+      // populate UI
+      document.getElementById('crumb').innerHTML =
+        `Episode <strong>${q.episode_id}</strong> · Question ${q.question_id}` +
+        ` (capability ${q.capability || '—'}, pattern ${q.pattern || '—'})` +
+        ` · Step <strong>1 of 4</strong> · Timer <span class="mono" id="timer">00 m 00 s</span>`;
+
+      document.getElementById('ep-meta').textContent =
+        `Episode ${q.episode_id} · ${q.domain || ''} · Open the thread DAG to read the comments before answering.`;
+      document.getElementById('q-text').textContent = q.question_text;
+
+      const opts = q.options || {};
+      const order = ['A', 'B', 'C', 'D'];
+      document.getElementById('q-options').innerHTML = order
+        .filter(k => k in opts)
+        .map(k => `<div style="margin: 6px 0;"><strong>(${k})</strong>&nbsp;&nbsp; ${opts[k]}</div>`)
+        .join('');
+
+      document.getElementById('q-criterion').textContent = q.criterion_definition || '—';
+      document.getElementById('q-meta').innerHTML = `
+        <tr><td class="subtle" style="width: 140px; border: none;">Episode</td>
+            <td class="mono" style="border: none;">${q.episode_id}</td></tr>
+        <tr><td class="subtle" style="border: none;">Question ID</td>
+            <td class="mono" style="border: none;">${q.question_id}</td></tr>
+        <tr><td class="subtle" style="border: none;">Capability</td>
+            <td class="mono" style="border: none;">${q.capability || '—'}</td></tr>
+        <tr><td class="subtle" style="border: none;">Pattern</td>
+            <td class="mono" style="border: none;">${q.pattern || '—'}</td></tr>
+        <tr><td class="subtle" style="border: none;">Evidence atoms (gold)</td>
+            <td class="mono" style="border: none;">${(q.evidence_node_ids || []).length} listed</td></tr>
+      `;
+
+      // simple in-page timer
+      const t0 = Date.now();
+      setInterval(() => {
+        const s = Math.floor((Date.now() - t0) / 1000);
+        const mm = String(Math.floor(s / 60)).padStart(2, '0');
+        const ss = String(s % 60).padStart(2, '0');
+        const el = document.getElementById('timer');
+        if (el) el.textContent = `${mm} m ${ss} s`;
+      }, 1000);
+
+      // submit button stashes draft state into sessionStorage and forwards
+      document.getElementById('btn-submit').addEventListener('click', (ev) => {
+        ev.preventDefault();
+        const draft = {
+          question_id: q.question_id,
+          episode_id:  q.episode_id,
+          domain:      q.domain,
+          chosen_idx:  Number(document.getElementById('q-answer').value || -1),
+          chosen_letter: ['A','B','C','D'][Number(document.getElementById('q-answer').value)] || null,
+          confidence:  document.getElementById('q-confidence').value,
+        };
+        sessionStorage.setItem('socialbench_draft', JSON.stringify(draft));
+        window.location.href = 'annotate.html';
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
