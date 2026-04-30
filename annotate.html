@@ -20,6 +20,7 @@
           <div class="nav-section-title">Part&nbsp;2&nbsp;— Verification</div>
           <a href="dashboard.html#verification"            class="nav-item">Stats &amp; analysis</a>
           <a href="dashboard.html#verification-guidelines" class="nav-item">Verification guidelines</a>
+          <a href="dashboard.html#phase3"                  class="nav-item">Phase 3 — Double-check</a>
           <a href="dashboard.html#per-question"            class="nav-item">Per-question records</a>
         </div>
         <div class="nav-section">
@@ -89,11 +90,23 @@
     }
     const sb = window.supabase.createClient(cfg.url, cfg.anon_key);
 
-    const draft = JSON.parse(sessionStorage.getItem('socialbench_draft') || '{}');
+    let draft = JSON.parse(sessionStorage.getItem('socialbench_draft') || '{}');
     if (!draft.question_id) {
-      document.getElementById('crumb').innerHTML =
-        'No draft found — start from <a href="solve.html">Question Verification</a>.';
-      return;
+      // Standalone-demo fallback: prefill with a real adjudicated case
+      // so the page renders something meaningful when reached directly.
+      draft = {
+        question_id:  'hn_46375174::q3_v6',
+        episode_id:   'hn_46375174',
+        chosen_idx:   2,
+        chosen_letter: 'C',
+        confidence:   'MEDIUM',
+        reasoning:    'Demo prefill: B picked C because 422 reads as a whole-device failure rather than a component-level fault under a strict reading of the criterion.',
+      };
+      sessionStorage.setItem('socialbench_draft', JSON.stringify(draft));
+      const crumb = document.getElementById('crumb');
+      if (crumb) crumb.innerHTML =
+        '<em>Demo mode — no live draft.</em> Prefilled with the canonical Phase-3 example ' +
+        '<code>hn_46375174::q3_v6</code>. Use <a href="solve.html">Question Verification</a> to start a real one.';
     }
 
     function renderRows(rows) {

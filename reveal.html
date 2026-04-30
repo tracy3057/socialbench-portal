@@ -20,6 +20,7 @@
           <div class="nav-section-title">Part&nbsp;2&nbsp;— Verification</div>
           <a href="dashboard.html#verification"            class="nav-item">Stats &amp; analysis</a>
           <a href="dashboard.html#verification-guidelines" class="nav-item">Verification guidelines</a>
+          <a href="dashboard.html#phase3"                  class="nav-item">Phase 3 — Double-check</a>
           <a href="dashboard.html#per-question"            class="nav-item">Per-question records</a>
         </div>
         <div class="nav-section">
@@ -103,12 +104,35 @@
     }
     const sb = window.supabase.createClient(cfg.url, cfg.anon_key);
 
-    const draft = JSON.parse(sessionStorage.getItem('socialbench_draft') || '{}');
-    const atoms = JSON.parse(sessionStorage.getItem('socialbench_atoms') || '[]');
+    let draft = JSON.parse(sessionStorage.getItem('socialbench_draft') || '{}');
+    let atoms = JSON.parse(sessionStorage.getItem('socialbench_atoms') || '[]');
     if (!draft.question_id) {
-      document.getElementById('crumb').innerHTML =
-        'No draft — start from <a href="solve.html">Question Verification</a>.';
-      return;
+      // Standalone-demo fallback: prefill with a real Phase-3 case
+      // (decision = clarify) so the page is meaningful when reached
+      // directly from the sidebar.
+      draft = {
+        question_id:  'hn_46375174::q3_v6',
+        episode_id:   'hn_46375174',
+        chosen_idx:   2,
+        chosen_letter: 'C',
+        confidence:   'MEDIUM',
+        reasoning:    'Demo prefill: B picked C reading 422 as a whole-device failure; A counted it as a component fault. Adjudicator (b) tightened the criterion to admit both readings.',
+      };
+      atoms = [
+        { node_id: 'hn_comment_103', category: 'include',  note: 'reject via personal-failure litany' },
+        { node_id: 'hn_comment_118', category: 'include',  note: 'reject via repair horror story' },
+        { node_id: 'hn_comment_125', category: 'include',  note: 'irrelevance pushback' },
+        { node_id: 'hn_comment_422', category: 'boundary', note: "demo: 'broke down quite easily within a year' — was the disagreement" },
+        { node_id: 'hn_comment_56',  category: 'include',  note: 'data-disagreement counter' },
+        { node_id: 'hn_comment_3',   category: 'include',  note: 'shortsightedness frame' },
+      ];
+      sessionStorage.setItem('socialbench_draft', JSON.stringify(draft));
+      sessionStorage.setItem('socialbench_atoms', JSON.stringify(atoms));
+      const crumb = document.getElementById('crumb');
+      if (crumb) crumb.innerHTML =
+        '<em>Demo mode — no live draft.</em> Prefilled with the canonical Phase-3 example ' +
+        '<code>hn_46375174::q3_v6</code> (decision = clarify). Use ' +
+        '<a href="solve.html">Question Verification</a> to start a real one.';
     }
 
     const pct = (b) => b === true ? '✅' : (b === false ? '❌' : '—');
