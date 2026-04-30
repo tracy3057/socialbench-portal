@@ -9,17 +9,20 @@
 <body>
   <div class="app">
     <aside class="sidebar">
-      <div class="welcome">
-        <span>Welcome:&nbsp; reviewer-A</span>
-        <span class="logout">Logout</span>
-      </div>
-      <nav>
-        <a href="dashboard.html">Live Dashboard</a>
-        <a href="index.html">Guidelines</a>
-        <a href="solve.html">Question Verification</a>
-        <a href="annotate.html">Per-comment Annotation</a>
-        <a href="reveal.html">Reveal &amp; Resolve</a>
-        <a href="demographics.html">Sign Up</a>
+      <nav class="sectioned">
+        <div class="nav-section">
+          <div class="nav-section-title">Part&nbsp;1&nbsp;— Authoring</div>
+          <a href="authoring.html" class="nav-item">Stats &amp; examples</a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-section-title">Part&nbsp;2&nbsp;— Verification</div>
+          <a href="dashboard.html" class="nav-item">Stats &amp; analysis</a>
+          <a href="index.html"     class="nav-item">How to verify</a>
+          <a href="solve.html"     class="nav-item">Question verification</a>
+          <a href="annotate.html"  class="nav-item">Per-comment annotation</a>
+          <a href="reveal.html"    class="nav-item">Compare &amp; resolve</a>
+        </div>
+        <a href="demographics.html" class="nav-item nav-standalone">Sign up</a>
       </nav>
     </aside>
 
@@ -172,5 +175,14 @@
     });
   })();
   </script>
+
+<script>
+(function(){
+  var here = (location.pathname.split('/').pop() || 'dashboard.html');
+  document.querySelectorAll('.sidebar .nav-item').forEach(function(a){
+    if (a.getAttribute('href') === here) a.classList.add('active');
+  });
+})();
+</script>
 </body>
 </html>
